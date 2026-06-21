@@ -13,6 +13,12 @@ on:
   push:
     branches:
      - main
+  
+  schedule:
+  # cronograma de execução
+  # 1 - minutos, 2 - Hora, 3 - dia do mês, 4 - mês, 5 - dia da semana
+  # Roda a cada 30 min
+  - cron: '*/30 * * * *'
 
 #tarefas dentro da pipeline = jobs
 
