@@ -17,7 +17,7 @@ describe('Testes do Módulo de Pagamentos', function() {
             assert.equal(consultarPagamento.codigoBarras, '0987-7656-3477');
             assert.equal(consultarPagamento.empresa, 'Shopee');
             assert.equal(consultarPagamento.valor, 20.00);
-            assert.equal(consultarPagamento.categoria, 'padrao');
+            assert.equal(consultarPagamento.categoria, 'padrão');
         });
 
         it('Validar Segundo Pagamento incluído Com Valor Padrão', function(){
@@ -34,7 +34,7 @@ describe('Testes do Módulo de Pagamentos', function() {
             assert.equal(consultarPagamento.codigoBarras, '0987-7656-3475');
             assert.equal(consultarPagamento.empresa, 'Mercado Livre');
             assert.equal(consultarPagamento.valor, 55.50);
-            assert.equal(consultarPagamento.categoria, 'padrao');
+            assert.equal(consultarPagamento.categoria, 'padrão');
         });
 
         it('Validar terceiro Pagamento incluído Com Valor Cara', function(){
@@ -68,7 +68,7 @@ describe('Testes do Módulo de Pagamentos', function() {
             assert.equal(consultarPagamento.codigoBarras, '0987-7656-3478');
             assert.equal(consultarPagamento.empresa, 'Americanas');
             assert.equal(consultarPagamento.valor, 100.00);
-            assert.equal(consultarPagamento.categoria, 'padrao');
+            assert.equal(consultarPagamento.categoria, 'padrão');
         });
 
         it('Validar Pagamento Com Valor Igual a 101.00', function(){

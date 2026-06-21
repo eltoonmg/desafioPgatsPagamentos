@@ -32,7 +32,7 @@ export function realizarPagamento(codigoBarras , empresa, valor) {
 
     for (let produto of produtos) {    
     if (produto.codigoBarras == codigoBarras) {
-      produto.categoria = produto.valor <= 100 ? 'padrao' : 'cara';
+      produto.categoria = produto.valor <= 100 ? 'padrão' : 'cara';
 
       pagamentos.push(produto)
       return pagamentos
