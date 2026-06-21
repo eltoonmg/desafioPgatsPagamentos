@@ -36,7 +36,7 @@ jobs:
       # instalção do node
       - uses: actions/setup-node@v4
         with:
-          node-version: latest
+          node-version: 20
 
       # Instalando depêndencia
       - name: Instalar dependências
@@ -45,6 +45,10 @@ jobs:
       # executar os testes 
       - name: Executando testes 
         run: npx mocha
+
+      # Instalando o allure CLI:
+      - name: Instalar Allure CLI
+        run: npm install -g allure-commandline
 
       # passos para gerar o relatório com Allure
       - name: Gerar relatório Allure
