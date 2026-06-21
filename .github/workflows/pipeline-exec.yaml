@@ -1,0 +1,40 @@
+# pipeline de integração contínua utilizando GitHub Actions 
+
+# nome da pipeline
+name: 'Pipeline Integrada'
+
+# gatilhos / triggers - regras de disparo
+# gatilho manual = workflow_dispatch
+
+on:
+  workflow_dispatch:
+
+#tarefas dentro da pipeline = jobs
+
+jobs:
+  #nome do job
+  tests:
+    # maquina onde o job vai rodar
+    runs-on: ubuntu-latest
+
+    # passos do job
+    steps:
+      # clone do projeto
+      - uses: actions/checkout@v4
+
+      # instalção do node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      # inicializando o projeto no node
+      - name: inicializando node
+        run: npm init -y
+
+      #   instalação do mocha
+      - name: Instalando mocha
+        run: npm i mocha
+
+      # executar os testes 
+      - name: Executando testes 
+        run: npx mocha
