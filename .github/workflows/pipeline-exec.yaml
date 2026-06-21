@@ -9,6 +9,11 @@ name: 'Pipeline Integrada'
 on:
   workflow_dispatch:
 
+  # Execução por push
+  push:
+    branches:
+     - master
+
 #tarefas dentro da pipeline = jobs
 
 jobs:
