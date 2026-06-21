@@ -54,7 +54,7 @@ jobs:
 
       # executar os testes 
       - name: Executando testes 
-        run: npx mocha
+        run: npx mocha --reporter allure-mocha
 
       # Instalando o allure CLI:
       - name: Instalar Allure CLI
