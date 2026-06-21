@@ -12,7 +12,7 @@ on:
   # Execução por push
   push:
     branches:
-     - master
+     - main
 
 #tarefas dentro da pipeline = jobs
 
