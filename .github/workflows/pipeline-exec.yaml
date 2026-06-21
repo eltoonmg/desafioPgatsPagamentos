@@ -25,15 +25,11 @@ jobs:
       # instalção do node
       - uses: actions/setup-node@v4
         with:
-          node-version: 24.x
+          node-version: latest
 
-      # inicializando o projeto no node
-      - name: inicializando node
-        run: npm init -y
-
-      #   instalação do mocha
-      - name: Instalando mocha
-        run: npm i mocha
+      # Instalando depêndencia
+      - name: Instalar dependências
+        run: npm ci
 
       # executar os testes 
       - name: Executando testes 
