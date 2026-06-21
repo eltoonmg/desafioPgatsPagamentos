@@ -112,3 +112,41 @@ git branch -M main
 ```bash
 git push -u origin main
 ```
+
+---
+# Configuração da pipeline
+
+## 🚀 Pipeline de Integração Contínua
+
+Este projeto possui uma pipeline de Integração Contínua (CI) implementada com GitHub Actions para garantir a qualidade da aplicação através da execução automatizada dos testes.
+
+### Funcionalidades da Pipeline
+
+✅ **Execução Manual**
+
+* Permite disparar a execução da pipeline manualmente através do GitHub Actions utilizando o gatilho `workflow_dispatch`.
+
+✅ **Execução Automática por Push**
+
+* Os testes são executados automaticamente após novos commits enviados para a branch principal (`main`).
+
+✅ **Execução Agendada**
+
+* A pipeline também é executada automaticamente em intervalos programados utilizando agendamento via `cron`, garantindo monitoramento contínuo da estabilidade do projeto.
+
+### Validações Realizadas
+
+* Instalação automática das dependências do projeto.
+* Execução dos testes automatizados utilizando Mocha.
+* Geração de relatórios de execução com Allure Report.
+
+## 📊 Relatório de Execução
+
+O relatório mais recente pode ser acessado em: https://eltoonmg.github.io/desafioPgatsPagamentos/
+
+### Tecnologias Utilizadas
+
+* GitHub Actions
+* Node.js
+* Mocha
+* Allure Report
