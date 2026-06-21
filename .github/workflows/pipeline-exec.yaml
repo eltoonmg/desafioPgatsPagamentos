@@ -45,3 +45,16 @@ jobs:
       # executar os testes 
       - name: Executando testes 
         run: npx mocha
+
+      # passos para gerar o relatório com Allure
+      - name: Gerar relatório Allure
+        if: always()
+        run: |
+          npx allure generate allure-results --clean -o allure-report
+
+      - name: Salvar relatório como artefato
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
